@@ -1,0 +1,1192 @@
+\begin{filecontents*}[overwrite]{\jobname.xmpdata}
+\Title{Curriculum Vitae}
+\Author{Niccolò Scatena}
+\Language{en}
+\end{filecontents*}
+\documentclass[]{cv}
+
+\includeonly{coverletter}
+
+\title{Curriculum Vitae}
+\author{Niccolò Scatena}
+\date{\today}
+\firstname{Niccolò}
+\lastname{Scatena}
+\shortabout{MSc in Computer Engineering}
+\address{Castelnuovo di Garfagnana (LU)}
+\fulladdress{Via Garibaldi 18, 55032 Castelnuovo di Garfagnana (LU), Italy}
+\email{nscatena@insicuri.net}
+\emaildisplay{nscatena{\tiny\faAt}insicuri.net}
+\phone{+393314432124}
+\phonedisplay{+39\,331\,443\,2124}
+\telegram{SpeedJack}
+\github{SpeedJack}
+\linkedin{nscatena}
+\linkedindisplay{Niccolò Scatena}
+\stackurl{https://stackexchange.com/users/3484673/speedjack?tab=accounts}
+\stackdisplay{SpeedJack}
+\facebook{SpeedJack95}
+\facebookdisplay{Niccolò Scatena}
+
+\machine{Dell XPS 9575, Gentoo Linux \faLinux}
+\mobile{OnePlus 13, OxygenOS 15 \faAndroid}
+\editor{Neovim}
+
+\companyname{Company Name Inc.}
+\contactname{Contact HR Person}
+\companyaddress{Company Street 1\\12345 City}
+\position{Application Position}
+\positiondetails{Position on example.com, job ID 12345}
+
+\begin{document}
+
+\include{coverletter}
+
+\section*{Curriculum Vitae}
+
+\simpleheader{headercolour}{\pgfkeysvalueof{firstName}}{\pgfkeysvalueof{lastName}}{\pgfkeysvalueof{shortAbout}}{white}
+
+\subsection*{}
+\vspace{2.8em}
+\setlength{\columnsep}{1.5cm}
+\columnratio{0.23}[0.75]
+\begin{paracol}{2}
+	\hbadness5000
+
+	\paracolbackgroundoptions
+
+	\footnotesize
+	{
+		\setasidefontcolour
+		\flushright
+		\begin{center}
+			\roundpic{photo.jpg}
+		\end{center}
+
+		\bg{accentcolor}{white}{About Me}\\[0.5em]
+		{
+			\footnotesize
+			\RaggedLeft
+			I have been passionate about computer science since
+			2008. Initially self-taught, I gained significant
+			experience  through my work at Inforge. I'm able
+			to work both individually and in team, thrive on
+			learning new skills, and consistently strive for
+			excellence with a perfectionist mindset.
+		}
+		\bigskip
+
+		\bg{accentcolor}{white}{Personal}\\[0.5em]
+		\pgfkeysvalueof{firstName}~\pgfkeysvalueof{lastName}
+
+		29 ~\(\bullet\)~ Italian
+
+		\faCarSide~~AM, B
+
+		\bigskip
+
+		\bg{accentcolor}{white}{Interests \& Hobbies}\\[0.5em]
+		\faDiceD20~\texttt{Board~Games}
+		\quad\faChessPawn~\texttt{Chess}
+		\quad\faBitcoin~\texttt{Cryptocurrencies}
+		\quad\faLock~\texttt{Cybersecurity}
+		\quad\faGamepad~\texttt{Gaming}
+		\quad\faLaravel~\texttt{Laravel}
+		\quad\faLinux~\texttt{Linux}
+		\quad\faCode~\texttt{Open~Source~Development}
+		\quad\faDice~\texttt{Randomness~\&~\href{https://en.wikipedia.org/wiki/The_Black_Swan:_The_Impact_of_the_Highly_Improbable}{Black Swans}}
+		\quad\faChartLine~\texttt{Trading}
+
+		\bigskip\bigskip
+
+		\bg{accentcolor}{white}{Referees}\\[0.5em]
+		\textbf{Ing\@. Pericle Perazzo}\\
+		{\color{black!70}\faUniversity~University of Pisa}\\
+		{\color{black!70}\faEnvelope[regular]~\href{mailto:pericle.perazzo@unipi.it}{pericle.perazzo@unipi.it}}\\[0.5em]
+		\textbf{Ing\@. Giovanni Nardini}\\
+		{\color{black!70}\faUniversity~University of Pisa}\\
+		{\color{black!70}\faEnvelope[regular]~\href{mailto:giovanni.nardini@unipi.it}{giovanni.nardini@unipi.it}}\\
+
+		\bigskip\bigskip
+
+		\hspace{-1cm}\infobubble{\faEnvelope[regular]}{accentcolor}{white}{\href{mailto:\pgfkeysvalueof{email}}{\pgfkeysvalueof{emailDisplay}}}
+
+		\infobubble{\faTelegramPlane}{accentcolor}{white}{\href{https://t.me/\pgfkeysvalueof{telegram}}{t.me/\pgfkeysvalueof{telegram}}}
+
+		\infobubble{\faPhone}{accentcolor}{white}{\href{tel:\pgfkeysvalueof{phone}}{\pgfkeysvalueof{phoneDisplay}}}
+		% \\{\vspace{-2ex}\tiny\slshape - spam filter: text before calling -\hspace{1em}}\vspace{0.5em}
+
+		\infobubble{\faGithub}{accentcolor}{white}{\href{https://github.com/\pgfkeysvalueof{github}}{\pgfkeysvalueof{github}}}
+		
+		\infobubble{\faStackOverflow}{accentcolor}{white}{\href{\pgfkeysvalueof{stackUrl}}{\pgfkeysvalueof{stackDisplay}}}
+
+		\infobubble{\faLinkedinIn}{accentcolor}{white}{\href{https://www.linkedin.com/in/\pgfkeysvalueof{linkedin}}{\pgfkeysvalueof{linkedinDisplay}}}
+
+		\infobubble{\faFacebook}{accentcolor}{white}{\href{https://www.facebook.com/\pgfkeysvalueof{facebook}}{\pgfkeysvalueof{facebookDisplay}}}
+
+		\vfill
+
+		\hspace{-1cm}\infobubble{\faLaptop}{accentcolor}{white}{\tiny\pgfkeysvalueof{machine}}
+
+		\hspace{-1cm}\infobubble{\faMobile}{accentcolor}{white}{\tiny\pgfkeysvalueof{mobile}}
+
+		\hspace{-1cm}\infobubble{\faCode}{accentcolor}{white}{\tiny\pgfkeysvalueof{editor}}
+
+		\phantom{x}
+	}
+	\switchcolumn
+
+	\small
+	\section*{Curriculum}
+	\begin{tabular}{>{\raggedleft\arraybackslash}p{0.108\textwidth}| p{0.48\textwidth} c}
+		2019--\textit{present}\newline
+		{\color{accentcolor}\scriptsize\faHeart~\textsl{Volunteering}}
+		& \textbf{Secretary \faAt{} \href{https://www.garfaludica.it}{Garfaludica APS}}\newline
+		\textsc{Secretary} {\color{black!70}\footnotesize(since 2022)} \(\bullet\) \textsc{Volunteer} {\color{black!70}\footnotesize(since 2019)}\newline
+		{\footnotesize{\color{cvred}\faMapMarker}~~\textsc{Castelnuovo di Garfagnana (LU)}\quad{\color{cvred}\faGlobe}~~\href{https://www.garfaludica.it}{\color{black!70}\texttt{www.garfaludica.it}}}\newline
+		{\color{black!70}\footnotesize A nonprofit organization
+		promoting board games and role-playing games in Garfagnana
+		(LU). I contributed to the association's growth and developed
+		websites and softwares to digitalize its
+		management processes. As secretary, I oversee all technical,
+		financial and administrative operations and ensure compliance
+		with the law.}\vspace{1em}
+		& \raisebox{-0.8\height}{\href{https://www.garfaludica.it}{\includegraphics[width=1cm]{garfaludica}}} \\
+		2009--\textit{present}\newline
+		{\color{accentcolor}\scriptsize\faHeart~\textsl{Volunteering}}
+		& \textbf{Admin \& Developer \faAt{} \href{https://www.inforge.net}{Inforge}}\newline
+		\textsc{Forum Administrator \& Sysadmin} {\color{black!70}\footnotesize(since 2014)}\newline
+		\textsc{Forum Moderator \& Developer} {\color{black!70}\footnotesize(since 2009)}\newline
+		{\footnotesize{\color{cvred}\faMapMarker}~~\textsc{Online Community}\quad{\color{cvred}\faGlobe}~~\href{https://www.inforge.net}{\color{black!70}\texttt{www.inforge.net}}}\newline
+		{\color{black!70}\footnotesize One of Italy's largest gaming
+		and computer science forums. As a moderator, I kept the forum
+		organized and supported users. Later, as an administrator, I
+		managed the server infrastructure, developed XenForo add-ons,
+		and guided the community's direction alongside other admins.
+		\newline{}Profile:
+		\href{https://www.inforge.net/forum/members/speedjack.100009/}{www.inforge.net/forum/members/speedjack.100009}}
+		& \raisebox{-0.8\height}{\href{https://www.inforge.net}{\includegraphics[width=1cm]{inforge}}} \\
+	\end{tabular}
+	\vspace{1em}
+
+	\begin{minipage}[t]{0.35\textwidth}
+		\section*{Degrees}
+		\begin{tabular}{>{\footnotesize}r >{\footnotesize}p{0.6\textwidth} c}
+			2024
+			& \textbf{MSc in Computer Engineering}\newline
+			\textsl{\scriptsize\color{black!70}Curriculum in Cybersecurity}\newline
+			\textsc{\href{https://www.unipi.it}{University of Pisa}}\newline
+			\textsc{Final grade: 110L/110}
+			{\tiny\color{black!70}\textsc{(top grade)}}\vspace{1em}
+			& \raisebox{-0.8\height}{\href{https://www.unipi.it}{\includegraphics[width=0.7cm]{unipi}}} \\
+			2019
+			& \textbf{BSc in Computer Engineering}\newline
+			\textsc{\href{https://www.unipi.it}{University of Pisa}}\newline
+			\textsc{Final grade: 109/110}\vspace{1em}
+			&
+			\raisebox{-0.8\height}{\href{https://www.unipi.it}{\includegraphics[width=0.7cm]{unipi}}} \\
+			2014 & \textbf{High School}\newline
+			\textsl{\scriptsize\color{black!70}Qualification in Scientific Studies}\newline
+			\textsc{\href{https://www.isigarfagnana.it}{Liceo Scientifico ``G.~Galilei''}}\newline
+			\textsc{Castelnuovo di Garfagnana}\newline
+			\textsc{Final grade: 82/100}
+			&
+			\raisebox{-0.8\height}{\Large\color{accentcolor}\href{https://www.isigarfagnana.it}{\faSchool}} \\
+		\end{tabular}
+		\vspace{0.4em}
+		\section*{Languages}
+		\begin{tabular}{r KKKK}
+			& \scriptsize\textsc{read} & \scriptsize\textsc{write}
+			& \scriptsize\textsc{listen} & \scriptsize\textsc{speak}\\\addlinespace[.25em]
+			\rowcolor{accentcolor}\cellcolor{white}\textbf{Italian}
+			& \multicolumn{4}{c}{\emph{\textbf{\color{white}mother tongue}}}\\\addlinespace[.25em]
+			\rowcolor{accentcolor}\cellcolor{white}\textbf{English}
+			& \color{white}\textbf{C2*} & \color{white}\textbf{C2*}
+			& \color{white}\textbf{C1*} & \color{white}\textbf{B2}
+		\end{tabular}
+		\raggedleft\color{black!70}\tiny\textsl{*Estimated, not certified}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.32\textwidth}
+		\section*{Certificates \& Grants}
+		\begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.75\textwidth}}
+			2018 & Cisco Certified Network Associate (CCNA)\\\addlinespace[.25em]
+			2011 & European Computer Driving License (ECDL)\\\addlinespace[.25em]
+			2010 & Trinity College London Certificate in Spoken English, Grade 5
+		\end{tabular}
+		\vspace{3.4em}
+		\section*{Publications}
+		\begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.75\textwidth}}
+			2022 & ``Adaptive Distance Sensing in Contact Tracing
+			     Applications Through Indoor/Outdoor Detection''.
+			     In: \emph{Wireless Mobile Communication and
+			     Healthcare}. Ed.~by G.~Xinbo et al. Cham: Springer
+			     International Publishing, 2022, pp.~157--165.
+			     \textsc{isbn}: 978-3-031-06368-8. \textsc{doi}:
+			     \href{https://doi.org/10.1007/978-3-031-06368-8_11}{\texttt{10.1007/978-3-031-06368-8\_11}}
+		\end{tabular}
+	\end{minipage}
+	\vspace{-1em}
+
+	\section*{Skills}
+	\begin{tabular}{>{\leavevmode\color{black!70}\scriptsize\slshape\raggedleft\arraybackslash}p{0.075\textwidth}| p{0.6\textwidth}}
+		Programming Langs &
+		\cvtag{AutoIT}
+		\cvtag{Assembly}
+		\cvtag*{Bash}
+		\cvtag*{C}
+		\cvtag{C\#}
+		\cvtag*{C++}
+		%\cvtag{Dart}
+		\cvtag{GNU Octave}
+		\cvtag*{Java}
+		\cvtag*{JavaScript}
+		\cvtag{Lua}
+		\cvtag*{Matlab}
+		\cvtag*{PHP}
+		\cvtag*{Python}
+		%\cvtag{TypeScript}
+		\cvtag{Visual Basic .NET}
+		\vspace{0.5em}\\
+		Other Langs &
+		\cvtag*{CSS}
+		\cvtag*{HTML}
+		\cvtag*{JSON}
+		\cvtag*{\LaTeX}
+		\cvtag{Less.js}
+		\cvtag{PGF/TikZ}
+		\cvtag*{SQL}
+		\cvtag*{UML}
+		\cvtag{Verilog}
+		\cvtag{VHDL}
+		\cvtag*{XML}
+		\cvtag{YAML}
+		\vspace{0.5em}\\
+		Frameworks, Libs, DBMS &
+		\cvtag{Floodlight}
+		%\cvtag{Flutter}
+		\cvtag*{Gentoo Ebuilds}
+		\cvtag{Hibernate}
+		\cvtag*{Inertia.js}
+		\cvtag*{Laravel}
+		\cvtag*{MySQL}
+		\cvtag*{MongoDB}
+		\cvtag{Neo4j}
+		\cvtag{OpenSSL}
+		\cvtag*{OMNeT++}
+		\cvtag{PayPal JavaScript SDK}
+		\cvtag*{Python Pandas}
+		\cvtag*{Tailwind CSS}
+		\cvtag*{Telegram Bot API}
+		\cvtag*{Vue.js}
+		\cvtag{Vuetify}
+		\cvtag*{XenForo}
+		\vspace{0.5em}\\
+		Tools &
+		\cvtag{Android Studio}
+		\cvtag*{Cachegrind}
+		\cvtag{Cisco Packet Tracer}
+		\cvtag*{Docker}
+		\cvtag*{Docker Compose}
+		\cvtag{Eclipse}
+		\cvtag*{git}
+		\cvtag*{GNU Autotools}
+		\cvtag*{GNU Debugger}
+		\cvtag*{GNU Make}
+		\cvtag*{GnuPG}
+		\cvtag*{GNU Toolchain}
+		\cvtag{ImageMagick}
+		\cvtag{INTO-CPS}
+		\cvtag*{Jupyter}
+		\cvtag{Maven}
+		\cvtag{ModelSim}
+		\cvtag*{(Neo)Vim}
+		\cvtag{OllyDBG}
+		\cvtag*{Valgrind}
+		\cvtag{Xilinx Vivado}
+		\vspace{0.5em}\\
+		Other Skills & 
+		\cvtag*{Agile}
+		\cvtag*{Algo-Trading}
+		\cvtag{Android Dev}
+		\cvtag{A.I.}
+		\cvtag{ANNs}
+		\cvtag*{Bitcoin}
+		\cvtag*{Blockchain}
+		\cvtag{CNNs}
+		\cvtag*{Cryptocurrencies}
+		\cvtag*{Crypto Trading}
+		\cvtag*{Cybersecurity}
+		\cvtag*{Data Analysis}
+		\cvtag*{Linux}
+		\cvtag{Machine Learning}
+		\cvtag{Malware Analysis}
+		\cvtag*{Networking}
+		\cvtag*{MVC}
+		\cvtag*{OOP}
+		\cvtag*{NoSQL}
+		\cvtag{Reverse Engineering}
+		\cvtag*{Technical Analysis}
+		\cvtag*{\emph{Terzo Settore} (nonprofit)}
+		\cvtag*{Trading}
+	\end{tabular}
+	\vspace{0.5em}
+
+	\setlength{\parindent}{0pt}
+	\begin{minipage}[t]{0.75\textwidth}
+		\begin{center}
+			\fontfamily{\sfdefault}\selectfont\color{black!70}\small
+			\pgfkeysvalueof{firstName} \pgfkeysvalueof{lastName}
+			\icon{\faEnvelope}{accentcolor}{} \href{mailto:\pgfkeysvalueof{email}}{\texttt{\pgfkeysvalueof{emailDisplay}}}
+			\icon{\faPhone}{accentcolor}{} \href{tel:\pgfkeysvalueof{phone}}{\texttt{\pgfkeysvalueof{phoneDisplay}}}
+
+			\icon{\faMapMarker}{accentcolor}{} \pgfkeysvalueof{fullAddress}
+		\end{center}
+	\end{minipage}
+
+\end{paracol}
+\clearpage
+
+\section*{Works \& Projects (1)}
+
+\simpletitle{headercolour}{Works \& Projects (1)}{white}
+
+\subsection*{}
+\vspace{2.8em}
+
+
+\section*{Theses}
+
+\begin{tabular}{>{\scshape\raggedleft\arraybackslash}p{0.1\textwidth} | p{0.86\textwidth}}
+	MSc Thesis\medskip\newline\includegraphics[width=1cm]{unipi} &
+	\textbf{``iblock: An OMNeT++ Library for Bitcoin Simulation''}\hfill\privaterepo{SpeedJack/iblock}\newline
+	\phantom{x}\hfill{\footnotesize\color{black!70}\faGlobe~\href{https://etd.adm.unipi.it/t/etd-11112024-094651/}{\texttt{etd.adm.unipi.it/t/etd-11112024-094651}}}\smallskip\newline
+	{\color{black!70}\footnotesize \textbf{iblock} is an OMNeT++ (a C++
+	discrete-event simulation framework) simulation library for the Bitcoin
+	protocol, enabling simulations across networking, consensus,
+	incentives, and data layers. It offers high-fidelity representations of
+	Bitcoin's internal data structures and protocol messages. Efficient,
+	modular, and extensible, iblock integrates seamlessly with other
+	OMNeT++ models and is the \emph{first} Bitcoin simulator to support
+	Bitcoin's UTXO-based accounting model, dynamic difficulty adjustments,
+	and complete transaction modeling. It has been evaluated against
+	another Bitcoin simulator for performance and used to simulate attacks
+	like \emph{selfish mining}, showcasing its capability to analyze
+	Bitcoin network vulnerabilities.}\smallskip\newline
+	\skill*{Bitcoin}
+	\skill*{Blockchain}
+	\skill{Cachegrind}
+	\skill{Cryptocurrencies}
+	\skill{Cybersecurity}
+	\skill*{C++}
+	\skill*{Data Analysis}
+	\skill{GNU Debugger}
+	\skill{GNU Make}
+	\skill{GNU Toolchain}
+	\skill{Jupyter}
+	\skill{\LaTeX}
+	\skill{Matplotlib}
+	\skill{Networking}
+	\skill{NumPy}
+	\skill*{OMNeT++}
+	\skill*{OOP}
+	\skill*{Performance Evalutation}
+	\skill*{Performance Optimization}
+	\skill{PowerPoint}
+	\skill{Python}
+	\skill{Python Pandas}
+	\skill*{Simulation}
+	\skill{UML}
+	\skill{Valgrind}
+	\vspace{1.5em}\\
+	BSc Thesis\medskip\newline\includegraphics[width=1cm]{unipi} &
+	\textbf{``Analisi del Trend della Qualità dell'Aria Nazionale''}\hfill\partialprivaterepo{SpeedJack/tesi-moniqa}\newline
+	{\color{black!70}\textsl{``Analysis of the National Air Quality
+	Trend''}}\hfill{\color{black!70}\faGlobe~{\footnotesize live at} \href{https://moniqa.dii.unipi.it}{\texttt{moniqa.dii.unipi.it}}}~~~~\phantom{\partialprivatetag}\smallskip\newline
+	{\color{black!70}\footnotesize Extension to MonIQA website (a platform
+	for viewing air quality values published by the Regional Agencies for
+	the Protection of the Environment) that adds a new page to show
+	historical data in charts.}\smallskip\newline
+	\skill*{AJAX}
+	\skill*{CSS}
+	\skill*{PHP}
+	\skill{Google Charts}
+	\skill*{HTML}
+	\skill*{JavaScript}
+	\skill{JSON}
+	\skill{\LaTeX}
+	\skill*{MySQL}
+	\skill{Python}
+	\skill*{SQL}
+	\skill*{Web Development}
+\end{tabular}
+
+\section*{Works for Garfaludica
+APS\hfill\raisebox{-0.2\height}{\includegraphics[width=0.6cm]{garfaludica}}}
+
+\begin{itemize}
+	\renewcommand{\labelitemi}{\color{accentcolor}\faArrowCircleRight}
+	\setlength{\itemsep}{1em}
+	\item \textbf{Garfaludica APS Website}\hfill{\color{black!70}\faGlobe~{\footnotesize live at}
+		\href{https://www.garfaludica.it}{\texttt{www.garfaludica.it}}}~~~~\privatetag\newline
+		{\color{black!70}\footnotesize Actually just a landing
+		page.}\vspace{0.125cm}\newline
+		\skill{CSS}
+		\skill*{HTML}
+		\skill{JavaScript}
+		\skill{Responsive Design}
+		\skill{SVG}
+	\item \textbf{GobCon Garfagnana Booking Portal}\hfill\publicrepo{Garfaludica-APS/gobcon.garfaludica.it}\newline
+		\phantom{x}\hfill{\color{black!70}\faGlobe~{\footnotesize live at}
+		\href{https://gobcon.garfaludica.it}{\texttt{gobcon.garfaludica.it}}}~~~~\phantom{\opensourcetag}\newline
+		{\color{black!70}\footnotesize A booking portal designed for
+		\emph{GobCon Garfagnana}, the annual event hosted by the
+		association. The platform facilitates reservations for hotel
+		rooms and meals (breakfast, lunch, and dinner) across
+		customizable date ranges. Through an intuitive control panel,
+		administrators can manage reservations, as well as add new
+		hotels and rooms to the available inventory and invite new
+		admins, controlling their permissions. Secure payment
+		processing is seamlessly integrated with
+		PayPal.}\vspace{0.125cm}\newline
+		\skill{AJAX}
+		\skill*{CSS}
+		\skill{Docker}
+		\skill{Docker Compose}
+		\skill{Google Maps API}
+		\skill*{HTML}
+		\skill*{Inertia.js}
+		\skill*{JavaScript}
+		\skill*{JSON}
+		\skill*{Laravel}
+		\skill*{MVC}
+		\skill*{MySQL}
+		\skill*{OOP}
+		\skill{PayPal JavaScript SDK}
+		\skill*{PHP}
+		\skill*{Responsive Design}
+		\skill*{SQL}
+		\skill{SVG}
+		\skill*{Tailwind CSS}
+		\skill*{Vue.js}
+		\skill*{Web Development}
+		\skill{Web Security}
+	% \item \textbf{FederludoCon 2025 Booking Portal}\hfill\publicrepo{Garfaludica-APS/federludocon.garfaludica.it}\newline
+	% 	\phantom{x}\hfill{\color{black!70}\faGlobe~{\footnotesize live at}
+	% 	\href{https://federludocon.garfaludica.it}{\texttt{federludocon.garfaludica.it}}}~~~~\phantom{\opensourcetag}\newline
+	% 	{\color{black!70}\footnotesize Booking portal for
+	% 	\emph{FederludoCon 2025} (annual convention of italian board
+	% 	games associations). Derived from the project above.\newline
+	% 	\textbf{Same skills as above.}}
+	\item \textbf{\LaTeX{} classes and packages for Garfaludica APS documents}\hfill\privaterepo{Garfaludica-APS}\newline
+		{\color{black!70}\footnotesize Various \LaTeX{} classes and
+		packages for the association's documents. All produced
+		documents are available in numerous repositories of the GitHub
+		organization (about 160 documents produced per
+		year).}\vspace{0.125cm}\newline
+		\skill{GNU Make}
+		\skill*{\LaTeX}
+	\item \textbf{Garfaludica APS Telegram Bot}\hfill{\color{black!70}\faGlobe~{\footnotesize live at}
+		\href{https://t.me/GarfaludicaAPSbot}{\texttt{t.me/GarfaludicaAPSBot}}}~~~~\privatetag\newline
+		{\color{black!70}\footnotesize A Telegram bot that allows
+		members to download association's documents and cast their
+		votes during meetings. It also supports delegated voting,
+		anonymous voting and elections with multiple
+		ballots.}\vspace{0.125cm}\newline
+		\skill{JSON}
+		\skill{OOP}
+		\skill*{Python}
+		\skill{SQL}
+		\skill*{Telegram Bot API}
+	\item \textbf{Scripts for memership cards generation and printing}\hfill\privatetag\newline
+		{\color{black!70}\footnotesize Bash and Python scripts to
+		generate printable PDFs for PVC cards.}\vspace{0.125cm}\newline
+		\skill*{Bash}
+		\skill*{ImageMagick}
+		\skill{\LaTeX}
+		\skill{Python}
+\end{itemize}
+
+\section*{Open-Source Contributions}
+
+\begin{tabular}{>{\ttfamily\footnotesize\arraybackslash}p{0.15\textwidth}
+	>{\footnotesize\arraybackslash}p{0.81\textwidth}}
+	\href{https://github.com/gentoo/gentoo}{gentoo/gentoo} &
+	\textcolor{black!70}{Added ebuild scripts for Sway and related softwares to
+	the official Gentoo ebuild repository.}\\\addlinespace[.5em]
+	\href{https://github.com/swaywm/sway}{swaywm/sway} &
+	\textcolor{black!70}{Fixed some bugs in Sway (a tiling Wayland
+	compositor).}
+\end{tabular}
+
+\clearpage
+
+\section*{Works \& Projects (2)}
+
+\simpletitle{headercolour}{Works \& Projects (2)}{white}
+
+\subsection*{}
+\vspace{2.8em}
+
+\section*{Works for
+Inforge\hfill\raisebox{-0.2\height}{\includegraphics[width=0.6cm]{inforge}}}
+
+\begin{itemize}
+	\renewcommand{\labelitemi}{\color{cvred}\faArrowCircleRight}
+	\setlength{\itemsep}{1em}
+	\item \textbf{Various XenForo Add-ons}\hfill\partialprivaterepo{InforgeNet}\newline
+		{\color{black!70}\footnotesize Developed more than 30 add-ons
+		for XenForo. Most notably:\hfill{\color{black!70}\faGlobe~{\footnotesize live at}
+		\href{https://www.inforge.net/forum/}{\texttt{www.inforge.net/forum}}}~~~~\phantom\partialprivatetag
+		\begin{itemize}
+			\item \faGithub~\href{https://github.com/InforgeNet/GridShow}{\texttt{InforgeNet/GridShow}}
+				(\textcolor{cvred}{private repo}): Shows a grid
+				of tiles with the most important threads of the
+				forum, automatically adjusting the layout. See
+				Inforge's forum home page
+				(\href{https://www.inforge.net/forum/}{\texttt{inforge.net/forum}})
+				for a live example.
+			\item \faGithub~\href{https://github.com/InforgeNet/TwitchPiper}{\texttt{InforgeNet/TwitchPiper}}
+				and
+				\faGithub~\href{https://github.com/InforgeNet/TwitchLiveCheck}{\texttt{InforgeNet/TwitchLiveCheck}}
+				(\textcolor{cvred}{private repos}):
+				Automatically checks when the official
+				Inforge Twitch channel goes live and shows the
+				stream on eveery page of the forum in a
+				Picture-in-Picture mode.
+			\item \faGithub~\href{https://github.com/InforgeNet/PostTOC}{\texttt{InforgeNet/PostTOC}}
+				(\textcolor{cvgreen}{open source}): Adds an
+				automatically generated table of contents to
+				the first post of a thread.
+			\item \faGithub~\href{https://github.com/InforgeNet/BbMath}{\texttt{InforgeNet/BbMath}}
+				(\textcolor{cvgreen}{open source}): Adds custom
+				BBCode tags to render mathematical formulas
+				using LaTeX.
+		\end{itemize}}
+		\skill{AJAX}
+		\skill*{CSS}
+		\skill{Docker}
+		\skill{Docker Compose}
+		\skill*{HTML}
+		\skill*{JavaScript}
+		\skill*{JSON}
+		\skill*{Less.js}
+		\skill{MathJax}
+		\skill*{MVC}
+		\skill*{MySQL}
+		\skill*{OOP}
+		\skill*{PHP}\\
+		\skill*{Responsive Design}
+		\skill*{SQL}
+		\skill{Twitch API}
+		\skill*{Web Development}
+		\skill*{Web Security}
+		\skill*{XenForo}
+	\item \textbf{OfferteBOT}\hfill\privaterepo{InforgeNet/OfferteBOT}\newline
+		{\color{black!70}\footnotesize Python bot which scrapes a
+		source (bypassing Cloudflare) for Amazon deals and posts them
+		on the forum using XenForo API.}\smallskip\newline
+		\skill{JSON}
+		\skill*{OOP}
+		\skill*{Python}
+		\skill*{XenForo API}
+		\skill{XML}
+	\item \textbf{Inforge Telegram Bot}\hfill\publicrepo{SpeedJack/inforge-chatbot}\newline
+		{\color{black!70}\footnotesize Telegram bot used to manage the
+		Inforge Telegram group. It supports user management, user
+		verification, and anti-flooding protection.}\smallskip\newline
+		\skill{PHP}
+		\skill*{Telegram Bot API}
+		\skill*{Python}
+		\skill{Bash}
+		\skill{SQL}
+		\skill*{OOP}
+	\item \textbf{z0r URL Shortener}\hfill\publicrepo{InforgeNet/YOURLS}\newline
+		{\color{black!70}\footnotesize z0r.it was a URL shortener
+		service based on YOURLS and operated by Inforge with
+		applications for Windows
+		(\faGithub~\href{https://github.com/InforgeNet/z0r-desktop}{\texttt{InforgeNet/z0r-desktop}}),
+		Linux
+		(\faGithub~\href{https://github.com/InforgeNet/z0r-script}{\texttt{InforgeNet/z0r-script}}),
+		Android
+		(\faGithub~\href{https://github.com/InforgeNet/z0r-android}{\texttt{InforgeNet/z0r-android}}),
+		and a Firefox extension
+		(\faGithub~\href{https://github.com/InforgeNet/z0r-firefox}{\texttt{InforgeNet/z0r-firefox}}).}
+		\smallskip\newline
+		\skill*{Android Dev}
+		\skill*{Bash}
+		\skill*{C\#}
+		\skill*{Firefox Add-ons}
+		\skill{Gradle}
+		\skill*{Java}
+		\skill*{JavaScript}
+		\skill{OOP}
+	\item \textbf{2hack}\hfill\losttag\newline
+		{\color{black!70}\footnotesize 2hack.net was an online massive
+		multiplayer web-based hacking simulation game similar to
+		OGame.}\smallskip\newline
+		\skill{AJAX}
+		\skill*{CSS}
+		\skill*{Game Development}
+		\skill*{HTML}
+		\skill*{JavaScript}
+		\skill*{MySQL}
+		\skill*{OOP}
+		\skill*{PHP}
+		\skill*{SQL}
+		\skill*{Web Development}
+		\skill{Web Security}
+	\item \textbf{Cheat Development}\hfill\losttag\newline
+		{\color{black!70}\footnotesize Developed cheats and bots for
+		various games.}\smallskip\newline
+		\skill{Assembly}
+		\skill{AutoIT}
+		\skill*{Cheat Engine}
+		\skill*{C\#}
+		\skill*{Game Hacking}
+		\skill{OllyDBG}
+		\skill*{Reverse Engineering}
+		\skill*{Visual Basic .NET}
+		\skill{Windows}
+		\skill*{WinAPI}
+	\item \textbf{Malware Analysis}\newline
+		{\color{black!70}\footnotesize Actively monitored and analyzed
+		binaries posted by the community to take down
+		malwares.}\smallskip\newline
+		\skill*{Assembly}
+		\skill*{Java Bytecode}
+		\skill*{Malware Analysis}
+		\skill*{OllyDBG}
+		\skill*{Reverse Engineering}
+		\skill{Windows}
+		\skill{WinAPI}
+		\skill*{.NET CIL}
+\end{itemize}
+
+\section*{Personal Projects \& Works}
+
+\begin{itemize}
+	\renewcommand{\labelitemi}{\color{cvgreen}\faArrowCircleRight}
+	\setlength{\itemsep}{1em}
+	\item \textbf{Curriculum Vitae} {\color{black!70}(This Document)}\hfill\publicrepo{SpeedJack/curriculum-vitae}\newline
+		\skill{GNU Make}
+		\skill*{\LaTeX}
+		\skill{PGF/TikZ}
+	\item \textbf{Personal Gentoo Overlay}\hfill\publicrepo{SpeedJack/speedjack-lay}\newline
+		{\color{black!70}\footnotesize Personal Gentoo overlay containing
+		ebuilds for various software.}\smallskip\newline
+		\skill*{Bash}
+		\skill*{Gentoo}
+		\skill*{Gentoo Ebuilds}
+		\skill{GNU Autotools}
+		\skill{GNU Make}
+		\skill{GNU Toolchain}
+		\skill*{Linux}
+		\skill{Portage}
+	\item \textbf{Trading Strategies for Freqtrade}\hfill\privaterepo{SpeedJack/ft\_crypto}\newline
+		{\color{black!70}\footnotesize Developed various complex
+		trading strategies for Freqtrade (crypto trading bot). Used on
+		Binance and FTX (\textit{rip!}).}\smallskip\newline
+		\skill*{Algo-Trading}
+		\skill*{Binance API}
+		\skill{Cryptocurrencies}
+		\skill*{Crypto Trading}
+		\skill*{Data Analysis}
+		\skill{Docker}
+		\skill{Docker Compose}
+		\skill{JSON}
+		\skill*{NumPy}
+		\skill{OOP}\\
+		\skill{Pine Script}
+		\skill*{Python}
+		\skill*{Python Pandas}
+		\skill*{Technical Analysis}
+		\skill*{Trading}
+		\skill*{TradingView}
+\end{itemize}
+
+\clearpage
+
+\section*{Works \& Projects (3)}
+
+\simpletitle{headercolour}{Works \& Projects (3)}{white}
+
+\subsection*{}
+\vspace{2.8em}
+
+\section*{Projects for University of
+Pisa\hfill\raisebox{-0.2\height}{\includegraphics[width=0.6cm]{unipi}}}
+
+\begin{tabular}{>{\scshape\raggedleft\arraybackslash}p{0.05\textwidth} | p{0.91\textwidth}}
+	2023 & \textbf{Intelligent Systems}\hfill\publicrepo{SpeedJack/intelligent-systems}\newline
+	{\color{black!70}\footnotesize Development of multiple A.I\@. systems
+	in Matlab. Dataset augmentation, feature selection and extraction, two
+	MLPs for estimating ECG starting from photoplethysmogram (PPG) signals,
+	another MLP and two fuzzy inference systems for determining a person
+	activity from PPG, a CNN for estimating ECG standard deviation and a
+	RNN predict future ECG values.}\smallskip\newline
+	\skill*{ANFIS}
+	\skill*{ANNs}
+	\skill*{A.I.}
+	\skill*{CNNs}
+	\skill*{Data Analysis}
+	\skill*{Data Augmentation}
+	\skill*{Feature Extraction}
+	\skill*{Feature Selection}
+	\skill*{Fuzzy Logic}
+	\skill{GNU Autotools}
+	\skill{GNU Make}
+	\skill{Hyperparameter Tuning}
+	\skill{\LaTeX}
+	\skill*{Machine Learning}
+	\skill*{Mamdani}
+	\skill*{Matlab}
+	\skill*{MLPs}
+	\skill*{OOP}
+	\skill*{RNNs}
+	\skill*{Sugeno}
+	\vspace{1em}\\
+	2022 & \textbf{Computer Architecture}\hfill\losttag\newline
+	{\color{black!70}\footnotesize Performance comparison between two
+	different CPUs in various tasks.}\smallskip\newline
+	\skill{Bash}
+	\skill*{Benchmarking}
+	\skill*{Data Analysis}
+	\skill{Matplotlib}
+	\skill*{Performance Comparison}
+	\skill*{Performance Evalutation}
+	\skill{PowerPoint}
+	\skill{Python}
+	\skill{Python Pandas}
+	\vspace{1em}\\
+	2022 & \textbf{Performance Evaluation of Computer Systems and Networks}\hfill\publicrepo{SpeedJack/pecsn}\newline
+	{\color{black!70}\footnotesize Simulation and analysis of an epidemic
+	broadcast communication model in OMNeT++.}\smallskip\newline
+	\skill{Bash}
+	\skill*{C++}
+	\skill*{Data Analysis}
+	\skill*{Data Visualization}
+	\skill{GNU Autotools}
+	\skill{GNU Debugger}
+	\skill{GNU Make}
+	\skill{GNU Toolchain}
+	\skill*{Jupyter}
+	\skill{\LaTeX}
+	\skill*{Matplotlib}
+	\skill{Networking}
+	\skill*{NumPy}
+	\skill*{OMNeT++}
+	\skill{OOP}
+	\skill*{Performance Evalutation}
+	\skill*{Performance Optimization}
+	\skill*{Python}
+	\skill*{Python Pandas}
+	\skill*{Simulation}
+	\skill{Valgrind}
+	\vspace{1em}\\
+	2022 & \textbf{Distributed Systems and Middleware Technologies}\hfill\publicrepo{SpeedJack/dsmt}\newline
+	{\color{black!70}\footnotesize A distributed, multi-user, online
+	auction application.}\smallskip\newline
+	\skill*{CSS}
+	\skill{Cybersecurity}
+	\skill*{Databases}
+	\skill*{Distributed Systems}
+	\skill*{EJB}
+	\skill*{Erlang}
+	\skill{GNU Autotools}
+	\skill{GNU Make}
+	\skill*{HTML}
+	\skill*{Java}
+	\skill*{JavaScript}
+	\skill*{JEE}
+	\skill*{JMS}
+	\skill{JSON}
+	\skill{\LaTeX}
+	\skill*{Maven}
+	\skill*{Mnesia}
+	\skill*{OOP}
+	\skill{UML}
+	\skill{Web Development}
+	\skill{Websockets}
+	\skill{XML}
+	\vspace{1em}\\
+	2022 & \textbf{Mobile and Social Sensing Systems (IODataAcquisition)}\hfill\publicrepo{nzoniD/IODataAcquisition}\newline
+	{\color{black!70}\footnotesize Android application that collects data
+	from different sensors and allows the user to tag data with an
+	INDOOR/OUTDOOR label. Used to train a neural network to automatically
+	recognize if the user is indoor or outdoor.\newline
+	Related publication:
+	\href{https://doi.org/10.1007/978-3-031-06368-8_11}{\texttt{10.1007/978-3-031-06368-8\_11}}}\smallskip\newline
+	\skill*{Android Dev}
+	\skill*{Android Studio}
+	\skill*{ANNs}
+	\skill*{A.I.}
+	\skill{Data Analysis}
+	\skill{Feature Extraction}
+	\skill{Feature Selection}
+	\skill{Gradle}
+	\skill{Google Activity Recognition}
+	\skill*{Java}
+	\skill{Jupyter}
+	\skill*{Machine Learning}
+	\skill{Matplotlib}
+	\skill*{Mobile Sensing}
+	\skill{NumPy}
+	\skill*{OOP}
+	\skill{Python}
+	\skill{Python Pandas}
+	\skill{Scikit-learn}
+	\skill{TensorFlow}
+	\skill{XML}
+	\vspace{1em}\\
+	2022 & \textbf{Mobile and Social Sensing Systems (IODetectionLib)}\hfill\publicrepo{nzoniD/IODetectionLib}\newline
+	{\color{black!70}\footnotesize An Android library containing an ANN
+	capable of determining if the user is INDOOR/OUTDOOR based on data
+	coming from different sensors. Developed on the analysis done using
+	IODataAcquisition.\newline
+	Related publication:
+	\href{https://doi.org/10.1007/978-3-031-06368-8_11}{\texttt{10.1007/978-3-031-06368-8\_11}}}\smallskip\newline
+	\skill*{Android Dev}
+	\skill*{Android Studio}
+	\skill*{ANNs}
+	\skill*{A.I.}
+	\skill{Gradle}
+	\skill{Google Activity Recognition}
+	\skill*{Java}
+	\skill*{Mobile Sensing}
+	\skill*{OOP}
+	\skill{TensorFlow}
+	\skill{XML}
+	\vspace{1em}\\
+	2022 & \textbf{Mobile and Social Sensing Systems (NotTooClose)}\hfill\publicrepo{RiccardoXe/NTC}\newline
+	{\color{black!70}\footnotesize An Android application which uses
+	Bluetooth Low Energy technology to determine distance between people
+	and inform the user if someone is too close (developed during COVID-19
+	pandemic). Uses IODetectionLib to improve distance computation in the
+	case the user is indoor or outdoor.\newline
+	Related publication:
+	\href{https://doi.org/10.1007/978-3-031-06368-8_11}{\texttt{10.1007/978-3-031-06368-8\_11}}}\smallskip\newline
+	\skill*{Android Dev}
+	\skill*{Android BLE}
+	\skill*{Android Studio}
+	\skill*{Bluetooth}
+	\skill{Data Analysis}
+	\skill{Gradle}
+	\skill{Google Activity Recognition}
+	\skill*{Java}
+	\skill*{Mobile Sensing}
+	\skill{Networking}
+	\skill*{OOP}
+	\skill{PowerPoint}
+	\skill{XML}
+	\vspace{1em}\\
+	2022 & \textbf{System and Network Hacking}\hfill\publicrepo{SpeedJack/ebookmarket}\newline
+	{\color{black!70}\footnotesize An online, security-focused, e-commerce
+	(website) for ebooks. It features an MVC framework developed from
+	scratch.}\smallskip\newline
+	\skill*{CSS}
+	\skill*{Cybersecurity}
+	\skill*{Databases}
+	\skill{Docker}
+	\skill{Docker Compose}
+	\skill*{JavaScript}
+	\skill*{JSON}
+	\skill*{HTML}
+	\skill{\LaTeX}
+	\skill*{MVC}
+	\skill*{MySQL}
+	\skill*{OOP}
+	\skill*{PHP}
+	\skill{Python}
+	\skill{Responsive Design}
+	\skill*{SQL}
+	\skill*{Web Development}
+	\skill*{Web Security}
+	\skill{zxcvbn}
+	%\vspace{1em}\\
+\end{tabular}
+
+\clearpage
+
+\section*{Works \& Projects (4)}
+
+\simpletitle{headercolour}{Works \& Projects (4)}{white}
+
+\subsection*{}
+\vspace{2.8em}
+
+\begin{tabular}{>{\scshape\raggedleft\arraybackslash}p{0.05\textwidth} | p{0.91\textwidth}}
+	2021 & \textbf{Formal Methods for Secure Systems}\hfill\publicrepo{SpeedJack/fmss}\newline
+	{\color{black!70}\footnotesize Analysis of the security of a
+	cyber-phisical system (a line following robot) under various types of
+	attacks.}\smallskip\newline
+	\skill*{C}
+	\skill*{Cybersecurity}
+	\skill*{Cyber-Physical Systems}
+	\skill*{Data Analysis}
+	\skill*{Formal Methods}
+	\skill{GNU Autotools}
+	\skill{GNU Debugger}
+	\skill{GNU Make}
+	\skill{GNU Toolchain}
+	\skill*{INTO-CPS}
+	\skill{JSON}
+	\skill{\LaTeX}
+	\skill*{MISRA C}
+	\skill{Python}
+	\vspace{1em}\\
+	2021 & \textbf{Electronics and Communications Systems}\hfill\publicrepo{SpeedJack/cordic-vectoring}\newline
+	{\color{black!70}\footnotesize Design and synthesis of the CORDIC
+	algorithm in vectoring mode to convert cartesian coordinates into polar
+	for the Xilinx's ZyBo Development Board.}\smallskip\newline
+	\skill*{Data Analysis}
+	\skill*{Electronic Systems}
+	\skill{\LaTeX}
+	\skill*{Matlab}
+	\skill*{ModelSim}
+	\skill{Performance Optimization}
+	\skill*{VHDL}
+	\skill*{Xilinx Vivado}
+	\vspace{1em}\\
+	2021 & \textbf{Software Systems Engineering}\hfill\publicrepo{SpeedJack/2020-LSSE-Predictive-maintenance}\newline
+	{\color{black!70}\footnotesize Development of an A.I\@. application
+	which takes data from supply chain machines and determines if a machine
+	is about to break (predictive maintenance).}\smallskip\newline
+	\skill{A.I.}
+	\skill*{Agile}
+	\skill{Data Analysis}
+	\skill{JSON}
+	\skill{Machine Learning}
+	\skill{Matplotlib}
+	\skill{NumPy}
+	\skill*{OOP}
+	\skill*{Predictive Maintenance}
+	\skill*{Python}
+	\skill{Python Pandas}
+	\skill{Scikit-learn}
+	\skill{Trello}
+	\vspace{1em}\\
+	2021 & \textbf{Advanced Network Architectures and Wireless Systems}\hfill\publicrepo{SpeedJack/anaws}\newline
+	{\color{black!70}\footnotesize Development of a module for Floodlight
+	to support Dual Ascent algorithm to find the minimum cost broadcast
+	tree in a network. Analysis of the performance and scalability of the
+	Dual Ascent algorithm.}\smallskip\newline
+	\skill{Bash}
+	\skill{Data Analysis}
+	\skill{Docker}
+	\skill{Docker Compose}
+	\skill{Excel}
+	\skill*{Floodlight}
+	\skill{GNU Autotools}
+	\skill{GNU Make}
+	\skill*{Java}
+	\skill{\LaTeX}
+	\skill{Maven}
+	\skill*{Networking}
+	\skill*{OOP}
+	\skill*{OpenFlow}
+	\skill{Performance Evalutation}
+	\skill{Performance Comparison}
+	\skill*{Simulation}
+	\skill*{Software Defined Networks}
+	\skill{Wireshark}
+	\vspace{1em}\\
+	2020 & \textbf{Foundations of Cybersecurity}\hfill\publicrepo{SpeedJack/foc-fiar}\newline
+	{\color{black!70}\footnotesize Design and implementation of the
+	Four-In-A-Row game, focusing on security of the
+	application.}\smallskip\newline
+	\skill*{C}
+	\skill*{Client-Server}
+	\skill*{Cryptography}
+	\skill*{Cybersecurity}
+	\skill*{Digital Signatures}
+	\skill{Formal Methods}
+	\skill{GNU Autotools}
+	\skill{GNU Debugger}
+	\skill{GNU Make}
+	\skill{GNU Toolchain}
+	\skill{\LaTeX}
+	\skill*{Linux}
+	\skill*{Networking}
+	\skill*{OpenSSL}
+	\skill*{Peer-to-Peer}
+	\skill*{Protocol Design}
+	\skill*{Sockets}
+	\skill*{TCP}
+	\skill*{UDP}
+	\skill{UML}
+	\skill{Valgrind}
+	\vspace{1em}\\
+	2020 & \textbf{Large-Scale and Multi-Structured Databases (Task 3)}\hfill\publicrepo{SpeedJack/lsmsd3}\newline
+	{\color{black!70}\footnotesize Multi-user client-server application for
+	restaurant reservations supporting recommendations based on restaurants
+	liked by friends. It uses a graph database.}\smallskip\newline
+	\skill*{Client-Server}
+	\skill{Data Analysis}
+	\skill*{Graph Databases}
+	\skill*{Java}
+	\skill*{JavaFX}
+	\skill{\LaTeX}
+	\skill*{Maven}
+	\skill*{Neo4j}
+	\skill{Networking}
+	\skill*{NoSQL}
+	\skill*{OOP}
+	\skill{Sockets}
+	\skill{UML}
+	\skill{XML}
+	\vspace{1em}\\
+	2020 & \textbf{Large-Scale and Multi-Structured Databases (Task 2)}\hfill\publicrepo{SpeedJack/lsmsd2}\newline
+	{\color{black!70}\footnotesize Multi-user, client-server, distributed
+	application which allows to develop algo-trading strategies for crypto
+	markets using Java and backtest them on past market data. It also
+	implements a complete Object-Document Mapper.}\smallskip\newline
+	\skill{Algo-Trading}
+	\skill{Bash}
+	\skill*{Big Data}
+	\skill{Binance API}
+	\skill*{Client-Server}
+	\skill{Coinbase API}
+	\skill{Data Analysis}
+	\skill{Distributed Systems}
+	\skill*{Java}
+	\skill*{Java Reflection}
+	\skill{JSON}
+	\skill{\LaTeX}
+	\skill*{Maven}
+	\skill*{MongoDB}
+	\skill{Networking}
+	\skill*{NoSQL}
+	\skill*{OOP}
+	\skill{Sockets}
+	\skill*{Technical Analysis}
+	\skill{UML}
+	\skill{XML}
+	\vspace{1em}\\
+	2020 & \textbf{Large-Scale and Multi-Structured Databases (Task 1)}\hfill\publicrepo{SpeedJack/lsmsd1}\newline
+	{\color{black!70}\footnotesize Multi-user client-server application for
+	restaurant reservations (same as Task 3, without restaurant
+	recommendations), using Hibernate and LevelDB.}\smallskip\newline
+	\skill*{Client-Server}
+	\skill{Data Analysis}
+	\skill*{Hibernate}
+	\skill*{Java}
+	\skill*{JavaFX}
+	\skill*{Key-Value Databases}
+	\skill{\LaTeX}
+	\skill*{LevelDB}
+	\skill*{Maven}
+	\skill*{MySQL}
+	\skill{Networking}
+	\skill*{NoSQL}
+	\skill*{OOP}
+	\skill*{Relational Databases}
+	\skill{Sockets}
+	\skill*{SQL}
+	\skill{UML}
+	\skill{XML}
+	\vspace{1em}\\
+	2020 & \textbf{Large-Scale and Multi-Structured Databases (Task 0)}\hfill\publicrepo{SpeedJack/lsmsd0}\newline
+	{\color{black!70}\footnotesize First version of the same application
+	(restaurant reservation) further developed in Tasks 1 and 3, using
+	just the MySQL connector.}\smallskip\newline
+	\skill*{Client-Server}
+	\skill*{Java}
+	\skill*{JavaFX}
+	\skill{\LaTeX}
+	\skill*{Maven}
+	\skill*{MySQL}
+	\skill{Networking}
+	\skill*{OOP}
+	\skill*{Relational Databases}
+	\skill{Sockets}
+	\skill*{SQL}
+	\skill{UML}
+	\skill{XML}
+	\vspace{1em}\\
+	2019 & \textbf{Programmazione Avanzata} {\color{black!70}(Advanced Programming)}\hfill\publicrepo{SpeedJack/programmazione2019}\newline
+	{\color{black!70}\footnotesize Student's record book which computes
+	statistics on votes.}\smallskip\newline
+	\skill*{Java}
+	\skill*{JavaFX}
+	\skill{OOP}
+	\skill{UML}
+	\skill{XML}
+	%\vspace{1em}\\
+\end{tabular}
+
+\clearpage
+
+\section*{Works \& Projects (5)}
+
+\simpletitle{headercolour}{Works \& Projects (5)}{white}
+
+\subsection*{}
+\vspace{2.8em}
+
+\begin{tabular}{>{\scshape\raggedleft\arraybackslash}p{0.05\textwidth} | p{0.91\textwidth}}
+	2019 & \textbf{Progettazione Web} {\color{black!70}(Web Design)}\hfill\publicrepo{SpeedJack/pweb2019}\newline
+	{\color{black!70}\footnotesize Web platform for jeopardy-style CTF
+	competitions. It features an MVC framework developed from
+	scratch.}\smallskip\newline
+	\skill*{CSS}
+	\skill{Docker}
+	\skill{Docker Compose}
+	\skill*{HTML}
+	\skill*{JavaScript}
+	\skill*{JSON}
+	\skill*{MVC}
+	\skill*{MySQL}
+	\skill*{OOP}
+	\skill*{PHP}
+	\skill{Responsive Design}
+	\skill*{SQL}
+	\skill*{Web Development}
+	\skill{Web Security}
+	\vspace{1em}\\
+	2016 & \textbf{Reti Informatiche} {\color{black!70}(Computer Networks)}\hfill\publicrepo{SpeedJack/reti2016}\newline
+	{\color{black!70}\footnotesize Mixed client-server and peer-to-peer
+	application to play Battleship online.}\smallskip\newline
+	\skill*{C}
+	\skill*{Client-Server}
+	\skill{Cybersecurity}
+	\skill{GNU Autotools}
+	\skill{GNU Debugger}
+	\skill{GNU Make}
+	\skill{GNU Toolchain}
+	\skill*{Linux}
+	\skill*{Networking}
+	\skill*{Peer-to-Peer}
+	\skill*{Protocol Design}
+	\skill*{Sockets}
+	\skill*{TCP}
+	\skill*{UDP}
+	\skill{Valgrind}
+	\vspace{1em}\\
+	2015 & \textbf{Fondamenti di Informatica II} {\color{black!70}(Computer Science Fundamentals II)}\hfill\publicrepo{SpeedJack/bd2015}\newline
+	{\color{black!70}\footnotesize Design and SQL implementation of a big
+	relational database that manages data related to the information system
+	of a restaurant chain, and implements some back-end functionalities for
+	data analysis and intelligent management.}\smallskip\newline
+	\skill*{Database Design}
+	\skill*{Data Analysis}
+	\skill*{DBMS}
+	\skill{\LaTeX}
+	\skill*{MySQL}
+	\skill*{Relational Databases}
+	\skill*{SQL}
+\end{tabular}
+
+\vspace{3em}
+
+\setlength{\parindent}{0pt}
+\begin{center}
+	\fontfamily{\sfdefault}\selectfont\color{black!70}\small
+	\pgfkeysvalueof{firstName} \pgfkeysvalueof{lastName}
+	\icon{\faEnvelope}{accentcolor}{} \href{mailto:\pgfkeysvalueof{email}}{\texttt{\pgfkeysvalueof{emailDisplay}}}
+	\icon{\faPhone}{accentcolor}{} \href{tel:\pgfkeysvalueof{phone}}{\texttt{\pgfkeysvalueof{phoneDisplay}}}
+
+	\icon{\faMapMarker}{accentcolor}{} \pgfkeysvalueof{fullAddress}
+\end{center}
+
+\end{document}
